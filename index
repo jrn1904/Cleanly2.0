@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLEANLy – Nachhaltige Shampooautomaten</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #0f172a; background: linear-gradient(135deg, #eef7f5, #e3f2fd); }
+
+    /* Animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    header {
+      background: url('/mnt/data/BTftJ.jpg') center/cover no-repeat;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1 { font-size: 3rem; margin-bottom: 20px; }
+    header p { font-size: 1.2rem; max-width: 600px; margin: auto; }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #66bb6a, #42a5f5);
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover { background: #e8f5e9; transform: scale(1.05); }
+
+    section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .card h3 { margin-bottom: 15px; }
+
+    .story {
+      background: linear-gradient(135deg, rgba(102,187,106,0.2), rgba(33,150,243,0.2));
+      border-radius: 20px;
+      padding: 40px;
+      line-height: 1.6;
+      backdrop-filter: blur(8px);
+    }
+
+    form {
+      max-width: 600px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #2e7d32;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(46,125,50,0.2);
+    }
+
+    button {
+      padding: 15px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #66bb6a, #42a5f5);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover { background: #1b5e20; transform: scale(1.05); }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #1b5e20;
+      color: white;
+    }
+
+    footer p { font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CLEANLy</h1>
+  <p>Die Zukunft der Haarpflege: Nachhaltige Mehrweg-Shampooautomaten für Unternehmen.</p>
+  <a href="#kontakt" class="cta-btn">Jetzt Partner werden</a>
+</header>
+
+<section class="fade-up">
+  <h2 style="text-align:center; margin-bottom:50px;">Unsere Vorteile</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🌱 Nachhaltig</h3>
+      <p>Reduzieren Sie Plastikmüll drastisch durch unsere innovativen Mehrweg-Systeme.</p>
+    </div>
+    <div class="card">
+      <h3>💧 Keine Reste</h3>
+      <p>Nie wieder halbvolle Flaschen – Kunden nutzen genau die Menge, die sie brauchen.</p>
+    </div>
+    <div class="card">
+      <h3>💰 Kosteneffizient</h3>
+      <p>Sparen Sie Verpackungs- und Produktionskosten – Vorteile für Händler und Kunden.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Einfache Integration</h3>
+      <p>Unsere Automaten lassen sich problemlos integrieren.</p>
+    </div>
+    <div class="card">
+      <h3>📊 Verbrauchskontrolle</h3>
+      <p>Bessere Planung und weniger Verschwendung durch transparente Nutzung.</p>
+    </div>
+    <div class="card">
+      <h3>🚀 Innovatives Image</h3>
+      <p>Positionieren Sie Ihr Unternehmen als nachhaltigen Vorreiter.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-up">
+  <h2 style="text-align:center; margin-bottom:50px;">Unsere Wirkung</h2>
+  <div class="grid" style="text-align:center;">
+    <div class="card">
+      <h3><span class="counter" data-target="80">0</span>%</h3>
+      <p>weniger Plastikverbrauch möglich</p>
+    </div>
+    <div class="card">
+      <h3><span class="counter" data-target="100">0</span>%</h3>
+      <p>Vermeidung von Shampooresten</p>
+    </div>
+    <div class="card">
+      <h3><span class="counter" data-target="30">0</span>%</h3>
+      <p>Kosteneinsparung für Unternehmen</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-up">
+  <h2 style="text-align:center; margin-bottom:50px;">Für wen ist CLEANLy?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🛒 Drogeriemärkte</h3>
+      <p>Erweitern Sie Ihr Sortiment mit nachhaltigen Innovationen.</p>
+    </div>
+    <div class="card">
+      <h3>🎪 Festivals</h3>
+      <p>Perfekt für temporäre Installationen.</p>
+    </div>
+    <div class="card">
+      <h3>⚽ Sportvereine</h3>
+      <p>Effiziente Lösungen für Duschräume.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-up">
+  <h2 style="text-align:center; margin-bottom:50px;">🌍 Stark für deine Region</h2>
+  <div class="story">
+    <p>
+      CLEANLy startet bewusst regional: Unser Fokus liegt aktuell auf Nordrhein-Westfalen.
+      Hier bauen wir starke Partnerschaften auf, testen unsere Systeme im echten Einsatz
+      und schaffen sichtbare Veränderungen direkt vor Ort.
+    </p>
+    <p style="margin-top:15px;">
+      Unser Ziel ist es, Unternehmen in NRW nachhaltiger und effizienter zu machen –
+      mit Lösungen, die sowohl der Umwelt als auch den Betriebskosten zugutekommen.
+    </p>
+    <p style="margin-top:15px;">
+      Doch wir denken größer: Schritt für Schritt wollen wir unser Konzept deutschlandweit
+      und langfristig sogar europaweit ausrollen.
+    </p>
+    <p style="margin-top:15px;">
+      CLEANLy steht für eine Zukunft, in der nachhaltige Innovationen nicht nur sinnvoll,
+      sondern auch wirtschaftlich überlegen sind.
+    </p>
+  </div>
+</section>
+
+<section class="fade-up">
+  <h2 style="text-align:center; margin-bottom:50px;">✨ Unsere Geschichte & Vision</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🎓 Der Anfang</h3>
+      <p>Alles begann als Schulprojekt im Rahmen eines Gründungswettbewerbs – mit einer einfachen Idee: weniger Plastik, mehr Nachhaltigkeit.</p>
+    </div>
+    <div class="card">
+      <h3>💡 Die Erkenntnis</h3>
+      <p>Wir erkannten schnell, dass hinter Shampoo-Flaschen ein riesiges Problem steckt: unnötiger Müll und Verschwendung.</p>
+    </div>
+    <div class="card">
+      <h3>🛠️ Die Lösung</h3>
+      <p>Unsere modularen Automaten bieten eine flexible, zukunftsfähige Alternative – und werden stetig weiterentwickelt.</p>
+    </div>
+    <div class="card">
+      <h3>🚀 Die Vision</h3>
+      <p>Von NRW aus in ganz Deutschland und Europa: Wir wollen nachhaltige Lösungen zur neuen Normalität machen.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="fade-up">
+  <h2 style="text-align:center; margin-bottom:30px;">Kontakt</h2>
+  <p style="text-align:center;">Interessiert an einer Zusammenarbeit?</p>
+
+  <form>
+    <input type="text" placeholder="Ihr Name" required>
+    <input type="email" placeholder="Ihre E-Mail" required>
+    <input type="text" placeholder="Unternehmen">
+    <textarea rows="5" placeholder="Ihre Nachricht" required></textarea>
+    <button type="submit">Anfrage senden</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 CLEANLy – Nachhaltigkeit neu gedacht</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  // Counter Animation
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 100;
+
+      if(count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCounter, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      if(entries[0].isIntersecting) {
+        updateCounter();
+      }
+    });
+
+    observer.observe(counter);
+  });
+</script>
+
+</body>
+</html>
